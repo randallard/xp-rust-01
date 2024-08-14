@@ -4,3 +4,13 @@ pub struct Task {
     pub done: bool,
     pub desc: Option<String>,
 }
+
+impl Task {
+    pub fn new(title: impl Into<String>) -> Task {
+        Task {
+            title: title.into(),
+            done: false,
+            desc: None,
+        }
+    }
+}

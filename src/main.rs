@@ -10,11 +10,7 @@ mod utils;
 mod task;
 
 fn main() -> Result<()> {
-    let task = Task {
-        title: "Task01".to_string(),
-        done: false,
-        desc: None
-    };
+    let task = Task::new("Task 01.0");
     println!("{task:#?}");
 
     Ok(())
