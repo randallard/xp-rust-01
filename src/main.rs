@@ -12,7 +12,7 @@ mod task;
 fn main() -> Result<()> {
     let task = Task {
         done: true,
-        ..Default::default()
+        ..Task::new("Task 0223")
     };
     println!("{task:#?}");
 
