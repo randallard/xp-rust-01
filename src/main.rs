@@ -11,11 +11,15 @@ mod task;
 mod web;
 
 fn main() -> Result<()> {
-    let req = RequestBuilder::new()
+    let mut req_builder = RequestBuilder::new();
+    req_builder
         .url("https://some-url.com/task/123")
-        .method("GET")
+        .method("GET");
+
+    // ... do some stuff
+    
+    let req = req_builder   
         .header("token","user_uuid.exp.sign")
-        .header("some_header_name","some_header_value")
         .build()?;
     println!("{req:#?}");
     Ok(())
