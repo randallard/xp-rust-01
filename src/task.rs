@@ -5,6 +5,16 @@ pub struct Task {
     pub desc: Option<String>,
 }
 
+impl Default for Task {
+    fn default() -> Self {
+        Self {
+            title: "Untitled".to_string(),
+            done: false,
+            desc: None,
+        }
+    }
+}
+
 impl Task {
     pub fn new(title: impl Into<String>) -> Task {
         Task {

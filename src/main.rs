@@ -10,7 +10,7 @@ mod utils;
 mod task;
 
 fn main() -> Result<()> {
-    let task = Task::new("Task 01.0");
+    let task = Task::default();
     println!("{task:#?}");
 
     Ok(())
