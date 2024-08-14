@@ -10,7 +10,8 @@ mod utils;
 mod task;
 
 fn main() -> Result<()> {
-    let task = Task::default();
+    let task: Option<Task> = None;
+    let task = task.unwrap_or_default();
     println!("{task:#?}");
 
     Ok(())
