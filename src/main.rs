@@ -1,19 +1,21 @@
-// #![allow(unused)]
+#![allow(unused)]
 
+use crate::task::Task;
 use crate::prelude::*;
 use std::fs::read_dir;
 
 mod error;
 mod prelude;
 mod utils;
+mod task;
 
 fn main() -> Result<()> {
-    println!("Hello, world!");
-
-    for entry in read_dir("./")?.filter_map(|e| e.ok()){
-        let entry: String = W(&entry).try_into()?;
-        println!("{entry}");
-    }
+    let task = Task {
+        title: "Task01".to_string(),
+        done: false,
+        desc: None
+    };
+    println!("{task:#?}");
 
     Ok(())
 }
