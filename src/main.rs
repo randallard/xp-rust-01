@@ -11,8 +11,7 @@ mod task;
 mod web;
 
 fn main() -> Result<()> {
-    let mut req_builder = RequestBuilder::new();
-    req_builder
+    let req_builder = RequestBuilder::new()
         .url("https://some-url.com/task/123")
         .method("GET");
 
@@ -23,9 +22,9 @@ fn main() -> Result<()> {
         .build()?;
     println!("{req:#?}");
 
-    req_builder.header("Client-Version","1.2");
-    let req = req_builder.build()?;
-    println!("{req:#?}");
-    
+    // req_builder.header("Client-Version","1.2");
+    // let req = req_builder.build()?;
+    // println!("{req:#?}");
+
     Ok(())
 }
