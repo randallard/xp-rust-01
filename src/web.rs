@@ -8,7 +8,7 @@ pub struct Request {
     pub body: Option<String>,
 }
 
-#[derive(Default)]
+#[derive(Default, Clone)]
 pub struct RequestBuilder {
     pub url: Option<String>,
     pub method: Option<String>, 
