@@ -2,18 +2,18 @@ use crate::prelude::*;
 
 #[derive(Debug)]
 pub struct Request {
-    pub url: String,
-    pub method: String, // should be enum
-    pub headers: Vec<(String, String)>, // name, value
-    pub body: Option<String>,
+    url: String,
+    method: String, // should be enum
+    headers: Vec<(String, String)>, // name, value
+    body: Option<String>,
 }
 
 #[derive(Default, Clone)]
 pub struct RequestBuilder {
-    pub url: Option<String>,
-    pub method: Option<String>, 
-    pub headers: Vec<(String, String)>, 
-    pub body: Option<String>,
+    url: Option<String>,
+    method: Option<String>, 
+    headers: Vec<(String, String)>, 
+    body: Option<String>,
 }
 
 impl RequestBuilder {
@@ -22,15 +22,15 @@ impl RequestBuilder {
     }
 
     pub fn url(mut self, url: impl Into<String>) -> Self {
-        self.url = Some(url.into());
+        self.url.insert(url.into());
         self
     } 
     pub fn method(mut self, method: impl Into<String>) -> Self {
-        self.method = Some(method.into());
+        self.method.insert(method.into());
         self
     }
     pub fn body(mut self, body: impl Into<String>) -> Self {
-        self.body = Some(body.into());
+        self.body.insert(body.into());
         self
     }
 
