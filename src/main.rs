@@ -1,9 +1,9 @@
 // region:    --- Modules
 
-pub type Result<T> = core::result::Result<T, Error>;
-pub type Error = Box<dyn std::error::Error>; // For early dev.
-
+mod error;
 mod fs;
+
+pub use self::error::{Error, Result};
 
 use crate::fs::list_files;
 
