@@ -10,3 +10,7 @@ https://youtu.be/Z_3WOSiYYFY?si=iLqKlEp_7fEme6lp
 - 0.0223 - setting fields explicitly and use new
 - 0.0232 - builder pattern in multiple steps
 - 0.0241 - builder pattern consuming with multiple steps and cleaned 
+
+https://youtu.be/pwmIQzLuYl0?si=IP0OXo6YUsYChvbw
+
+- 0.030   - 
